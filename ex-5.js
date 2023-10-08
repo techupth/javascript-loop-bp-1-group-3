@@ -85,7 +85,17 @@ let orders = [
 
 
 let currentPurchasedAmount;
-let maxPurchasedAmount;
+let maxPurchasedAmount = 0;
 let maxPurchasedId;
 
 // Start coding here
+for(let i = 0; i < orders.length; i = i + 1)
+{ currentPurchasedAmount = orders[i].productPrice * orders[i].productQuantity;
+ if( currentPurchasedAmount > maxPurchasedAmount)
+{ maxPurchasedAmount = currentPurchasedAmount; 
+  maxPurchasedId = orders[i].id ;}}
+
+  console.log( "Order id: " + maxPurchasedId + ", Total price: " + maxPurchasedAmount);
+
+
+ 
